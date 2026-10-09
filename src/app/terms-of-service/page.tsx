@@ -3,12 +3,14 @@ import { siteConfig } from "@/config/site";
 import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
 import Prose from "@/components/Prose";
+import DraftNotice from "@/components/DraftNotice";
 
 export const metadata = buildMetadata({
   title: "Terms of Service | AM TRADE SUPPLIES LTD",
   description:
     "Terms for using the AM TRADE SUPPLIES LTD website and enquiring about wholesale supply.",
   path: "/terms-of-service",
+  noindex: true,
 });
 
 export default function TermsPage() {
@@ -16,6 +18,7 @@ export default function TermsPage() {
     <>
       <PageHero title="Terms of Service" crumbs={[{ label: "Terms of Service" }]} />
       <Section>
+        <DraftNotice />
         <Prose>
           <p>By using this website you agree to these terms. They apply to your use of the site and to enquiries made through it.</p>
           <h2>Trade Supply</h2>

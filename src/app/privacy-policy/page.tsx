@@ -3,12 +3,14 @@ import { fullAddressOneLine, siteConfig } from "@/config/site";
 import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
 import Prose from "@/components/Prose";
+import DraftNotice from "@/components/DraftNotice";
 
 export const metadata = buildMetadata({
   title: "Privacy Policy | AM TRADE SUPPLIES LTD",
   description:
     "How AM TRADE SUPPLIES LTD handles personal information on this website.",
   path: "/privacy-policy",
+  noindex: true,
 });
 
 export default function PrivacyPage() {
@@ -16,6 +18,7 @@ export default function PrivacyPage() {
     <>
       <PageHero title="Privacy Policy" crumbs={[{ label: "Privacy Policy" }]} />
       <Section>
+        <DraftNotice />
         <Prose>
           <p>{siteConfig.name} (&ldquo;we&rdquo;, &ldquo;us&rdquo;) respects your privacy. This page explains how we handle personal information on this website.</p>
           <h2>Who We Are</h2>

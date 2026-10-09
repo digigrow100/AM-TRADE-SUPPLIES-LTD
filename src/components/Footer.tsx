@@ -3,6 +3,7 @@ import { categories } from "@/config/categories";
 import { legalNav, mainNav, portalNav } from "@/config/navigation";
 import { fullAddressLines, siteConfig } from "@/config/site";
 import Container from "./Container";
+import Logo from "./Logo";
 
 export default function Footer() {
   const quickLinks = [...mainNav.map(({ label, href }) => ({ label, href })), portalNav];
@@ -10,7 +11,7 @@ export default function Footer() {
     <footer className="bg-navy text-white/80">
       <Container className="grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <p className="text-lg font-bold text-white">{siteConfig.name}</p>
+          <Logo light />
           <p className="mt-3 text-sm">{siteConfig.tagline}.</p>
           <address className="mt-4 text-sm not-italic">
             {fullAddressLines.map((line) => (

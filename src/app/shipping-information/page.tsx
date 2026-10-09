@@ -2,6 +2,7 @@ import { buildMetadata } from "@/lib/metadata";
 import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
 import Prose from "@/components/Prose";
+import DraftNotice from "@/components/DraftNotice";
 import Button from "@/components/Button";
 
 export const metadata = buildMetadata({
@@ -9,6 +10,7 @@ export const metadata = buildMetadata({
   description:
     "Delivery and collection information for trade customers of AM TRADE SUPPLIES LTD. Arrangements are agreed per order.",
   path: "/shipping-information",
+  noindex: true,
 });
 
 export default function ShippingPage() {
@@ -16,6 +18,7 @@ export default function ShippingPage() {
     <>
       <PageHero title="Shipping Information" crumbs={[{ label: "Shipping Information" }]} />
       <Section>
+        <DraftNotice />
         <Prose>
           <p>Delivery and collection arrangements depend on the products, quantities and location involved.</p>
           <h2>Arrangements</h2>

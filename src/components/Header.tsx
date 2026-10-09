@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { mainNav, portalNav } from "@/config/navigation";
 import { siteConfig } from "@/config/site";
+import Logo from "./Logo";
 
 export default function Header() {
   const pathname = usePathname();
@@ -22,13 +23,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" onClick={close} className="flex items-center gap-2" aria-label={`${siteConfig.name} home`}>
-          <span className="flex h-9 w-9 items-center justify-center rounded-md bg-navy text-sm font-bold text-accent">
-            AM
-          </span>
-          <span className="text-sm font-bold leading-tight text-navy sm:text-base">
-            AM TRADE
-            <br className="sm:hidden" /> SUPPLIES LTD
-          </span>
+          <Logo />
         </Link>
 
         {/* Desktop navigation */}
